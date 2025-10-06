@@ -1,0 +1,247 @@
+$ThemeColor: rgb(152, 57, 255, 0.5);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  img.fixed-background {
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    z-index: -5;
+  }
+
+  header {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 10px 6px -6px #777;
+
+    section.logo {
+      display: flex;
+      flex: 2 1 400px;
+
+      align-items: center;
+      img {
+        height: 6vw;
+        width: 6vw;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    nav {
+      flex: 5 1 400px;
+
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+
+        li {
+          margin: 0 10px;
+          a {
+            text-decoration: none;
+            color: black;
+            font-size: 2rem;
+            transition: all 0.15s ease;
+            padding-bottom: 0.3rem;
+            &:hover {
+              color: $ThemeColor;
+              border-bottom: 3px solid $ThemeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.background-img {
+      //設定背景圖片
+      min-height: 70vh;
+      background-image: url("../images/日本櫻花.jpg");
+      background-size: cover;
+      background-position: center;
+      transition: all 0.75s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+
+      .filter {
+        background-color: rgba(0, 0, 0, 0.5);
+        min-height: 70vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      h3 {
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        position: absolute;
+      }
+    }
+    section.info-circles {
+      background-color: white;
+      align-items: center;
+
+      h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 2rem 0;
+      }
+
+      div.circles {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        div.circle {
+          padding: 1rem;
+          flex: 0 1 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 80%;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 0.3rem;
+            transition: all 0.1s ease-in;
+            &:hover {
+              transform: scale(1.1);
+
+              border: 3px solid$ThemeColor;
+            }
+          }
+        }
+      }
+    }
+    section.empty-container {
+      min-height: 70vh;
+
+      background-color: rgb(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        font-size: 2.5rem;
+        color: white;
+      }
+    }
+    section.googlemap {
+      background-color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      h3 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+        margin: 1rem;
+      }
+      iframe {
+        width: 100%;
+        height: 50vh;
+      }
+    }
+  }
+
+  footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+
+    section.logo {
+      img {
+        height: 18vw;
+        width: 18vw;
+      }
+      h3 {
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    section.links {
+      display: flex;
+      img {
+        height: 5vw;
+        width: 5vw;
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  body {
+    header {
+      flex-direction: column;
+      section.logo {
+        flex-direction: column;
+        justify-content: center;
+        img {
+          height: 40vw;
+          width: 40vw;
+        }
+      }
+      nav {
+        ul {
+          flex-direction: column;
+          li {
+            padding: 0.5rem 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $ThemeColor;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(124, 8, 219);
+}
