@@ -32,18 +32,18 @@ body header {
 }
 body header section.logo {
   display: flex;
-  flex: 2 1 400px;
+  flex: 2 1 200px;
   align-items: center;
 }
 body header section.logo img {
-  height: 6vw;
+  height: 6vh;
   width: 6vw;
 }
 body header section.logo h1 {
   font-size: 2.5rem;
 }
 body header nav {
-  flex: 5 1 400px;
+  flex: 5 1 100px;
 }
 body header nav ul {
   display: flex;
@@ -181,6 +181,26 @@ body footer section.links img {
 @media screen and (max-width: 1350px) {
   body header {
     flex-direction: column;
+  }
+  body header section.logo {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body header section.logo img {
+    height: 20vw;
+    width: 20vw;
+  }
+  body header nav ul {
+    flex-direction: row;
+  }
+  body header nav ul li {
+    padding: 0.5rem 0.25rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  body header {
+    flex-direction: column;
+    position: static;
   }
   body header section.logo {
     flex-direction: column;
